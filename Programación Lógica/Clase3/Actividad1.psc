@@ -11,12 +11,12 @@ Algoritmo Actividad1
 	
 	Si resta = 0 Entonces
 		Escribir "Valor es igual a 0"
-	Fin Si
-	
-	Si resta > 0 Entonces
-		Escribir "Valor es positivo"
 	SiNo
-		Escribir "Valor es negativo"
+		Si resta > 0 Entonces
+			Escribir "Valor es positivo"
+		SiNo
+			Escribir "Valor es negativo"
+		Fin Si
 	Fin Si
-	
+
 FinAlgoritmo
