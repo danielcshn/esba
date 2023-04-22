@@ -39,8 +39,7 @@ Algoritmo TP1_5
 		
 		Si cola(p_medio) = busco Entonces
 			encontro = Verdadero
-			pos = p_medio
-			Escribir "El saco azul se encuentra en la posición: ", pos
+			Escribir "El saco azul se encuentra en la posición: ", p_medio
 		SiNo
 			Si cola(p_medio)<busco Entonces
 				p_inicial = p_medio + 1
