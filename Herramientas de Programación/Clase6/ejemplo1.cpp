@@ -10,4 +10,6 @@ int main() {
 	
 	printf("\n Fin del programa \n");
 	system("PAUSE");
+	
+	return 0;
 }
