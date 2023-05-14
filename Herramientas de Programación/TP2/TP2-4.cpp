@@ -81,6 +81,7 @@ int main(){
 		}
 	}
 	
-
+	system("PAUSE");
+	cin.ignore();
 	return 0;
 }
