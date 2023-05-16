@@ -39,6 +39,7 @@ int main(){
 	nameDisplay();
 	
 	char car = 's';
+	string resp;
 	int valor1=0, valor2=0, suma12=0;
 	bool pasa1=true, pasa2=true;
 
@@ -72,12 +73,13 @@ int main(){
 		pasa1=true, pasa2=true;
 		
 		printf("\nDesea volver a cargar numeros? ingrese s o n (si o no): ");
-		
-		cin>>car;
+		cin>>resp;
+		car = resp[0];
 		
 		while(car != 's' && car !='n'){
 			printf("\n Por favor ingrese s o n (si o no): ");
-			cin>>car;
+			cin>>resp;
+			car = resp[0];
 		}
 	}
 	
