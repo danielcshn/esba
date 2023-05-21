@@ -14,9 +14,9 @@ nameDisplay(){
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole, 2);
 	// Muestro Integrantes
-	string integrantes[] = {"Matias X", "Juan X", "Fabian X", "Maximiliano X", "Geraldine X", "Daniel X", "Sergio X", "SergioX X", "Santiago X", "Veronica X"};
+	string integrantes[] = {"Matias X", "Juan X", "Walter X", "Maximiliano X", "Geraldine X", "Daniel X", "Sergio X", "Veronica X", "Olga X"};
 	printf(" EQUIPO B N\370 2\n\n");
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < 9; i++){
         cout << " - " << integrantes[i] << endl;
     }
     printf("\n\n");
@@ -49,6 +49,8 @@ int main(){
 			
 			if ((valor1 % 2 == 0) && valor1 > 0 ) {
 				pasa1 = false;
+			} else {
+				printf("\nERROR: Ingrese un numero par >0.\n");
 			}
 			
 		}while( pasa1 );
@@ -60,6 +62,8 @@ int main(){
 			
 			if ((valor2 % 2 == 0) && valor2 > 0 ) {
 				pasa2 = false;
+			} else {
+				printf("\nERROR: Ingrese un numero par >0.\n");
 			}
 			
 		}while( pasa2 );
@@ -73,7 +77,7 @@ int main(){
 		printf("\nDesea volver a cargar numeros? ingrese s/si o n/no: ");
 		
 		cin>>resp;
-		
+		transform(resp.begin(), resp.end(), resp.begin(), ::tolower);
 		while(resp != "s" && resp != "si" && resp != "n" && resp != "no"){
 			printf("\n Por favor ingrese s/si o n/no: ");
 			cin>>resp;

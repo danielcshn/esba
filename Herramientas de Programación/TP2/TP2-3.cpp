@@ -14,9 +14,9 @@ nameDisplay(){
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole, 2);
 	// Muestro Integrantes
-	string integrantes[] = {"Matias X", "Juan X", "Fabian X", "Maximiliano X", "Geraldine X", "Daniel X", "Sergio X", "SergioX X", "Santiago X", "Veronica X"};
+	string integrantes[] = {"Matias X", "Juan X", "Walter X", "Maximiliano X", "Geraldine X", "Daniel X", "Sergio X", "Veronica X", "Olga X"};
 	printf(" EQUIPO B N\370 2\n\n");
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < 9; i++){
         cout << " - " << integrantes[i] << endl;
     }
     printf("\n\n");
@@ -51,7 +51,8 @@ int main(){
     
     	cout << "\n\nQuiere volver a ingresar un numero? (Responde s/si para si o n/no para no)" << endl;
 		cin >> resp;
-		if (resp == "s" || resp == "S" || resp == "Si" || resp == "SI") {
+		transform(resp.begin(), resp.end(), resp.begin(), ::tolower);
+		if (resp == "s" || resp == "si") {
 			system("cls");
 			goto vuelve;
 		}

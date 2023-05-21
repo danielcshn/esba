@@ -15,9 +15,9 @@ nameDisplay(){
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole, 2);
 	// Muestro Integrantes
-	string integrantes[] = {"Matias X", "Juan X", "Fabian X", "Maximiliano X", "Geraldine X", "Daniel X", "Sergio X", "SergioX X", "Santiago X", "Veronica X"};
+	string integrantes[] = {"Matias X", "Juan X", "Walter X", "Maximiliano X", "Geraldine X", "Daniel X", "Sergio X", "Veronica X", "Olga X"};
 	printf(" EQUIPO B N\370 2\n\n");
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < 9; i++){
         cout << " - " << integrantes[i] << endl;
     }
     printf("\n\n");
@@ -34,11 +34,12 @@ nameDisplay(){
 // “Esta persona NO pertenece al grupo X”.
 
 int main(){
+	string nombre, apellido, resp;
+	
 	vuelve:
 		nameDisplay();
 	
-		string nombre, apellido, resp;
-		const char* inte[10] = {"matias x", "juan x", "fabian x", "maximiliano x", "geraldine x", "daniel x", "sergio x", "sergio2 x", "santiago x", "vero x"};
+		const char* inte[9] = {"matias x", "juan x", "walter x", "maximiliano x", "geraldine x", "daniel x", "sergio x", "veronica x", "olga x"};
 
 		cout << "Ingrese un nombre: " << endl;
 		cin >> nombre;
@@ -48,15 +49,16 @@ int main(){
 		string mc = nombre + " " + apellido;
 		transform(mc.begin(), mc.end(), mc.begin(), ::tolower);
 
-		if ((mc == inte[0]) || (mc == inte[1]) || (mc == inte[2]) || (mc == inte[3]) || (mc == inte[4]) || (mc == inte[5]) || (mc == inte[6]) || (mc == inte[7]) || (mc == inte[8]) || (mc == inte[9])){
-			cout << "\n>> Esta persona es parte del grupo 2" << endl;
+		if ((mc == inte[0]) || (mc == inte[1]) || (mc == inte[2]) || (mc == inte[3]) || (mc == inte[4]) || (mc == inte[5]) || (mc == inte[6]) || (mc == inte[7]) || (mc == inte[8])){
+			cout << "\n>> Esta persona es parte del grupo B 2" << endl;
 		} else {
-			cout << "\n>> Esta persona NO pertenece al grupo 2" << endl;
+			cout << "\n>> Esta persona NO pertenece al grupo B 2" << endl;
 		}
 
 	cout << "\n\nQuiere Buscar a otro nombre / apellido? (Responde s/si para si o n/no para no)" << endl;
 	cin >> resp;
-	if (resp == "s" || resp == "S" || resp == "Si" || resp == "SI") {
+	transform(resp.begin(), resp.end(), resp.begin(), ::tolower);
+	if (resp == "s" || resp == "si") {
 		system("cls");
 		goto vuelve;
 	}
