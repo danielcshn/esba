@@ -9,8 +9,8 @@ void asteriscos(){
 	cout << "\n";
 	for (int j=0;j<40;j++){
 		cout << "*";
-		cout << "\n";
 	}
+	cout << "\n";
 }
 
 int main(){
