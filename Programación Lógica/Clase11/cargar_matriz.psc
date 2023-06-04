@@ -4,7 +4,7 @@ Algoritmo cargar_matriz
 	
 	Para f=1 Hasta 3 Hacer
 		Para c=1 Hasta 4 Hacer
-			Escribir "Ingrese un numero para la fila ", f, "columna ", c
+			Escribir "Ingrese un numero para la fila ", f, " columna ", c
 			Leer M[f,c]
 		FinPara
 	FinPara
