@@ -7,31 +7,30 @@
 using namespace std;
 
 int main() {
-
-	ofstream archivo;
-	archivo.open("datos.txt", ios::app);
-	archivo << "Pero si utilizo " << endl;
-	archivo << " ios:app " << endl;
-	archivo << "puedo agregar datos" << endl;
-	archivo.close();
 	
-	char cadena[128];
-	long fin=0L;
-	ifstream archivo1("datos.txt");
-	if (archivo1.fail()){
-		cout << "\nEl archivo no s epudo abrir." << endl;
-		system("PAUSE");
-		exit(1);
-	}
-	
-	while(!archivo1.eof()){
-		archivo1.getline(cadena, sizeof(cadena));
-		cout << cadena << endl;
-		if ((++fin %24)==0){
-			cout << "Siguiente linea -->";
-			cin.get();
+	char linea[128];
+	long contador = 0L;
+	ifstream archivo("Pruebas.txt");
+	if(archivo.fail()){
+		cout << "No se encontro el archivo: Pruebas.txt" << endl;
+	} else {
+		
+		while(!archivo.eof()){
+			archivo.getline(linea, sizeof(linea));
+			cout << linea << endl;
+			if ((++contador % 24) == 0){
+				cout << "Continua...";
+				cin.get();
+			}
 		}
 	}
+	archivo.close();
+	
+	ofstream arch;
+	arch.open("Pruebas.txt");
+	arch << "CREE EL ARCHIVO" << endl;
+	arch << " A LA SALIDA " << endl;
+	arch.close();
 	
 	system("PAUSE");
 	return 0;
