@@ -1,0 +1,6 @@
+Ahora cambie 
+lo que habia escrito 
+en el archivo datos.txt
+Pero si utilizo 
+ ios:app 
+puedo agregar datos
