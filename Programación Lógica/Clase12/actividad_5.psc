@@ -8,7 +8,7 @@ Algoritmo actividad_5
 	Dimension edad[N]
 	
 	Para i=1 hasta N Hacer
-		Escribir "Ingrese el apellidoido:"
+		Escribir "Ingrese el apellido:"
 		Leer apellido[i] 	
 		Escribir "Ingrese la edad:"
 		Leer edad[i] 	
