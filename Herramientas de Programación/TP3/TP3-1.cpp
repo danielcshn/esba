@@ -81,7 +81,9 @@ main(){
 	
 	string textofrase;
 	cout << "Introduzca un Texto:" << endl;
-	cin >> textofrase;
+	getline(cin, textofrase);
+	
+	textofrase.erase(std::remove(textofrase.begin(), textofrase.end(), ' '), textofrase.end());
 	
 	int menuint, cVocales, cConsonantes, cNumeros;
 	
@@ -92,6 +94,7 @@ main(){
 		cout<<"\n3) Contar NUMEROS.";
 		cout<<"\n\nElija su opcion ===> ";
 		cin>>menuint;
+		cin.ignore();
 	
 	system("cls");
 	
