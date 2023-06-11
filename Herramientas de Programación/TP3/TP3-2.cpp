@@ -42,11 +42,13 @@ int main(){
 	nameDisplay();
 	
     char letra;
-    char respuesta;
+    string respuesta;
 
     do {
+    	volveralcase:
 		cout << "\nIngrese una letra (a, b, c, d) para ver una palabra: ";
         cin >> letra;
+        cin.ignore();
 
         switch (letra) {
             case 'a':
@@ -63,22 +65,20 @@ int main(){
                 break;
             default:
                 cout << "\nLa letra " << letra << " no es una letra habilitada. Por favor, ingrese a, b, c o d.\n" << endl;
+                goto volveralcase;
         }
         
-        //cin.clear();
-        //cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-        cout << "Desea volver a ingresar una letra? (s/n): ";
-        cin.ignore(); // Ignorar cualquier caracter residual en el buffer
-        respuesta = cin.get();
-
-        while (respuesta != 's' && respuesta != 'n') {
-            cout << "\nRespuesta invalida. Por favor, ingrese 's' (si) o 'n' (no): ";
-            cin.ignore();
-            respuesta = cin.get();
-        }
+        volver:
+		cout << "Desea volver a ingresar una letra? (s/n): ";
+        //cin >> respuesta;
+        getline(cin, respuesta);
         
-    } while (respuesta == 's');
+        if (respuesta != "s" && respuesta != "S" && respuesta != "n" && respuesta != "N"){
+        	cout << "\nRespuesta invalida! ";
+        	goto volver;
+		}
+        
+    } while (respuesta != "n" && respuesta != "N");
 
     return 0;
 }
