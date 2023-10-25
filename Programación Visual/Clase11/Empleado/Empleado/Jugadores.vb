@@ -22,4 +22,13 @@
         End Set
     End Property
 
+    Public Overloads Function apellido_nombre() As String
+        If (nombre <> "") And (apellido <> "") Then
+            apellido_nombre = nombre & " " & apellido
+        Else
+            MsgBox("Debe cargar nombre y apellido del empleado")
+            apellido_nombre = ""
+        End If
+    End Function
+
 End Class
