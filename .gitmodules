@@ -1,3 +1,6 @@
 [submodule "Programación Visual/TP-Final - Astro"]
 	path = Programación Visual/TP-Final - Astro
 	url = https://github.com/danielcshn/astro
+[submodule "Programación Orientada a Objetos/TP-Final - BiblioControl"]
+	path = Programación Orientada a Objetos/TP-Final - BiblioControl
+	url = https://github.com/danielcshn/bibliocontrol
