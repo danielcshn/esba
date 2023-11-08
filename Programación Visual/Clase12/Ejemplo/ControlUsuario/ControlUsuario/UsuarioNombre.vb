@@ -86,6 +86,26 @@
         End Set
     End Property
 
+    Private requerido As Boolean = True
+    Property RequeridoSegundoNombre() As Boolean
+        Get
+            Return requerido
+        End Get
+        Set(ByVal value As Boolean)
+            requerido = value
+        End Set
+    End Property
+
+    Private mensajeError As String = "Por favor ingrese su nombre."
+    Property ValidarMensajeError() As String
+        Get
+            Return mensajeError
+        End Get
+        Set(ByVal value As String)
+            mensajeError = value
+        End Set
+    End Property
+
     Private Sub primerNombre_TextChanged(sender As Object, e As EventArgs) Handles primerNombre.TextChanged, segundoNombre.TextChanged, apellido.TextChanged
         ' Muestra el contenido de las cajas de textos en la etiqueta.
         ' Apellido_Nombres.Text = primerNombre.Text & " " & segundoNombre.Text & " " & apellido.Text
@@ -111,6 +131,18 @@
         Me.Label1.Text = Label1Text
         Me.Label2.Text = Label2Text
         Me.Label3.Text = Label3Text
+    End Sub
+
+    Private Sub UsuarioNombre_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles Me.Validating
+        If RequeridoSegundoNombre = True Then
+            If primerNombre.Text = "" Or segundoNombre.Text = "" Or apellido.Text = "" Then
+                MsgBox(ValidarMensajeError)
+            End If
+        Else
+            If primerNombre.Text = "" Or apellido.Text = "" Then
+                MsgBox(ValidarMensajeError)
+            End If
+        End If
     End Sub
 
 End Class
