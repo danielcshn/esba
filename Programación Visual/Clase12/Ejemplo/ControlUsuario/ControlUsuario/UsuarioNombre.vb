@@ -50,6 +50,42 @@
         End Get
     End Property
 
+    Private text1 As String = "Apellido"
+
+    Property Label1Text() As String
+        Get
+            Return text1
+        End Get
+        Set(ByVal value As String)
+            text1 = value
+            Label1.Text = text1
+        End Set
+    End Property
+
+    Private text2 As String = "Primer Nombre"
+
+    Property Label2Text() As String
+        Get
+            Return text2
+        End Get
+        Set(ByVal value As String)
+            text2 = value
+            Label2.Text = text2
+        End Set
+    End Property
+
+    Private text3 As String = "Segundo Nombre"
+
+    Property Label3Text() As String
+        Get
+            Return text3
+        End Get
+        Set(ByVal value As String)
+            text3 = value
+            Label3.Text = text3
+        End Set
+    End Property
+
     Private Sub primerNombre_TextChanged(sender As Object, e As EventArgs) Handles primerNombre.TextChanged, segundoNombre.TextChanged, apellido.TextChanged
         ' Muestra el contenido de las cajas de textos en la etiqueta.
         ' Apellido_Nombres.Text = primerNombre.Text & " " & segundoNombre.Text & " " & apellido.Text
@@ -71,5 +107,10 @@
 
     End Sub
 
+    Private Sub UsuarioNombre_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.Label1.Text = Label1Text
+        Me.Label2.Text = Label2Text
+        Me.Label3.Text = Label3Text
+    End Sub
 
 End Class

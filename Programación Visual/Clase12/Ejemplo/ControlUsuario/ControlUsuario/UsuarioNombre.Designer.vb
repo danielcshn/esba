@@ -23,16 +23,22 @@ Partial Class UsuarioNombre
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Apellido_Nombres = New System.Windows.Forms.Label()
-        Me.apellido = New System.Windows.Forms.TextBox()
-        Me.primerNombre = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.segundoNombre = New System.Windows.Forms.TextBox()
+        Me.primerNombre = New System.Windows.Forms.TextBox()
+        Me.apellido = New System.Windows.Forms.TextBox()
+        Me.Apellido_Nombres = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.segundoNombre)
         Me.Panel1.Controls.Add(Me.primerNombre)
         Me.Panel1.Controls.Add(Me.apellido)
@@ -43,6 +49,54 @@ Partial Class UsuarioNombre
         Me.Panel1.Size = New System.Drawing.Size(548, 119)
         Me.Panel1.TabIndex = 0
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(358, 50)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(90, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Segundo Nombre"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(186, 50)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Primer Nombre"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(14, 50)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Apellido"
+        '
+        'segundoNombre
+        '
+        Me.segundoNombre.Location = New System.Drawing.Point(361, 68)
+        Me.segundoNombre.Name = "segundoNombre"
+        Me.segundoNombre.Size = New System.Drawing.Size(166, 20)
+        Me.segundoNombre.TabIndex = 3
+        '
+        'primerNombre
+        '
+        Me.primerNombre.Location = New System.Drawing.Point(189, 68)
+        Me.primerNombre.Name = "primerNombre"
+        Me.primerNombre.Size = New System.Drawing.Size(166, 20)
+        Me.primerNombre.TabIndex = 2
+        '
+        'apellido
+        '
+        Me.apellido.Location = New System.Drawing.Point(17, 68)
+        Me.apellido.Name = "apellido"
+        Me.apellido.Size = New System.Drawing.Size(166, 20)
+        Me.apellido.TabIndex = 1
+        '
         'Apellido_Nombres
         '
         Me.Apellido_Nombres.AutoSize = True
@@ -52,27 +106,6 @@ Partial Class UsuarioNombre
         Me.Apellido_Nombres.Size = New System.Drawing.Size(145, 18)
         Me.Apellido_Nombres.TabIndex = 0
         Me.Apellido_Nombres.Text = "Apellido y Nombre"
-        '
-        'apellido
-        '
-        Me.apellido.Location = New System.Drawing.Point(17, 53)
-        Me.apellido.Name = "apellido"
-        Me.apellido.Size = New System.Drawing.Size(166, 20)
-        Me.apellido.TabIndex = 1
-        '
-        'primerNombre
-        '
-        Me.primerNombre.Location = New System.Drawing.Point(189, 53)
-        Me.primerNombre.Name = "primerNombre"
-        Me.primerNombre.Size = New System.Drawing.Size(166, 20)
-        Me.primerNombre.TabIndex = 2
-        '
-        'segundoNombre
-        '
-        Me.segundoNombre.Location = New System.Drawing.Point(361, 53)
-        Me.segundoNombre.Name = "segundoNombre"
-        Me.segundoNombre.Size = New System.Drawing.Size(166, 20)
-        Me.segundoNombre.TabIndex = 3
         '
         'UsuarioNombre
         '
@@ -92,4 +125,7 @@ Partial Class UsuarioNombre
     Friend WithEvents Apellido_Nombres As Windows.Forms.Label
     Friend WithEvents segundoNombre As Windows.Forms.TextBox
     Friend WithEvents primerNombre As Windows.Forms.TextBox
+    Friend WithEvents Label3 As Windows.Forms.Label
+    Friend WithEvents Label2 As Windows.Forms.Label
+    Friend WithEvents Label1 As Windows.Forms.Label
 End Class
