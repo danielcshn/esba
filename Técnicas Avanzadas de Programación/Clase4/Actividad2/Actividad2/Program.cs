@@ -14,7 +14,10 @@ retorna un entero (el mayor).
 Y así con todos los ejercicios de la Clase 3. Involucrar al menos un método en el
 desarrollo del programa.
 
-Calcular ab por productos sucesivos.
+Escriba un programa que permita calcular las raíces de una ecuación de
+segundo grado. La formula es: (- b  √b
+2 – 4 ac) / 2a. Nota: el programa
+también debe mostrar raíces complejas.
  
  */
 
