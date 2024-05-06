@@ -5,8 +5,9 @@
 // **Programa: Calcular la función exponencial (e^x) en C#**
 // **Autor: danielcshn - https://github.com/danielcshn**
 // **Fecha: 22/04/2024**
+// **NOTA: 10**
 
-namespace Parcial_1
+namespace Parcial_1_10
 {
     class Program
     {
@@ -18,29 +19,41 @@ namespace Parcial_1
             {
                 // Ingreso de x
                 Console.WriteLine("\nIngrese el valor de x para calcular e^x:");
-                double x = Convert.ToDouble(Console.ReadLine());
+
+                double x = 0;
+                bool isValidInput = false;
+
+                while (!isValidInput) {
+                    string input = Console.ReadLine();
+                    isValidInput = double.TryParse(input, out x);
+
+                    if (!isValidInput)
+                        Console.WriteLine("Por favor, ingrese un número válido:");
+                }
+
                 // Cálculo de la función exponencial
                 double result = CalcExpo(x);
+
                 // Impresión del resultado
                 Console.WriteLine($"\nEl valor de e^{x} es: {result}\n");
 
                 // Preguntar si desea volver a calcular
                 Console.WriteLine("¿Desea calcular otro número? (y/n)");
+
                 string resp = Console.ReadLine();
-                while (resp.ToLower() != "y" && resp.ToLower() != "n")
-                {
+                while (resp.ToLower() != "y" && resp.ToLower() != "n") {
                     Console.WriteLine("Por favor, ingrese 'y' para sí o 'n' para no:");
                     resp = Console.ReadLine();
                 }
-                if (resp.ToLower() != "y")
-                {
+
+                if (resp.ToLower() != "y") {
                     cont = false;
                     Environment.Exit(0);
                 }
             }
         }
 
-        // **Función para calcular la exponencial (e^x)**
+        // Función para calcular la exponencial (e^x)
         static double CalcExpo(double x)
         {
             double r = 1.0;
