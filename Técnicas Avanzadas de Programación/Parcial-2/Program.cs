@@ -5,6 +5,7 @@
 // **Programa: Diseñar una clase que mantenga un arreglo (vector) de enteros, class Enteros. Con los siguientes datos y funciones miembros.**
 // **Autor: danielcshn - https://github.com/danielcshn**
 // **Fecha: 03/06/2024**
+// **NOTA: 7**
 
 namespace Parcial2
 {
