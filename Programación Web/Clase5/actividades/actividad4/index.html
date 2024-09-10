@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificar Tipo de Triángulo</title>
+</head>
+<body>
+    <h1>Identificación de Triángulos</h1>
+    <form action="procesar_triangulo.php" method="post">
+        <label for="lado1">Lado 1:</label>
+        <input type="number" name="lado1" id="lado1" required min="1" step="any">
+        <br><br>
+
+        <label for="lado2">Lado 2:</label>
+        <input type="number" name="lado2" id="lado2" required min="1" step="any">
+        <br><br>
+
+        <label for="lado3">Lado 3:</label>
+        <input type="number" name="lado3" id="lado3" required min="1" step="any">
+        <br><br>
+
+        <input type="submit" value="Identificar Triángulo">
+    </form>
+</body>
+</html>
