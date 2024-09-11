@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Edad y Términos</title>
+</head>
+<body>
+    <h1>Verificación de Edad y Aceptación de Términos</h1>
+    <form action="procesar_edad_terminos.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad" required>
+        <br><br>
+
+        <p>¿Acepta los términos y condiciones?</p>
+        <input type="radio" name="terminos" value="si" id="acepto" required>
+        <label for="acepto">Sí</label><br>
+        <input type="radio" name="terminos" value="no" id="noacepto" required>
+        <label for="noacepto">No</label>
+        <br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
