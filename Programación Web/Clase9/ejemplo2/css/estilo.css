@@ -1,0 +1,46 @@
+#head{
+width: 100%;
+border: 1px solid gray;
+box-shadow: 0 1px 5px #999;
+}
+#head h1{
+margin-top: 5px;
+margin-left: 20px;
+font-size: 20px;
+font-family: verdana;
+color: gray;
+}
+#head img{
+border-radius: 8px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0
+6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#contenido{
+padding-top: 100px;
+}
+#contenidoPcipal{
+margin-left: 30px;
+}
+#contenidoPcipal h1{
+font-size: 20px;
+font-family: verdana;
+}
+#contenidoPcipal p{
+padding-left: 15px;
+font-size: 12px;
+font-family: verdana;
+color: gray;
+}
+#footer{
+margin-top: 120px;
+padding: 10px;
+background-color: #000000;
+}
+#footer li{
+color: #fff;
+}
+#footer a, footer a:hover{
+color:gray;
+font-family: arial;
+font-size: 12px;
+}
